@@ -5,7 +5,7 @@ import { CoinMarketProvider } from '../context/context'
 import { GunProvider } from '../context/gunContext'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  
+  // wrap application in providers
   return (
     <MoralisProvider
       serverUrl={process.env.NEXT_PUBLIC_SERVER}

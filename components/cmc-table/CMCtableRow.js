@@ -44,22 +44,22 @@ const CMCtableRow = ({
     return graphImages[rndInt]
   }
 
-  const router = useRouter()
-  
+    const router = useRouter()
+
   const viewCoinDetails = () => {
     router.push(
-      `/currencies/info?symbol=${coinSymbol}&coin=${coinName}&price=${price}`
+      `/currencies/info?symbol=${coinSymbol}&coin=${coinName}&price=${price}`,
     )
   }
 
   const viewPrice = () => {
     router.push(
-      `/currencies/price??symbol=${coinSymbol}&coin=${coinName}&price=${price}`
+      `/currencies/price?symbol=${coinSymbol}&coin=${coinName}&price=${price}`,
     )
   }
 
   const formatNum = num => {
-    return Number(num.toFixed(2).toLocaleString())
+    return Number(num.toFixed(2)).toLocaleString()
   }
 
   return (

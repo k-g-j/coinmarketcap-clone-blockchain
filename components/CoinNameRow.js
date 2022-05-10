@@ -1,4 +1,5 @@
 import { useContext } from 'react'
+import { CoinMarketContext } from '../context/context'
 import Image from 'next/image'
 import btc from '../assets/btc.png'
 import eth from '../assets/eth.png'
@@ -11,14 +12,14 @@ import solana from '../assets/solana.png'
 import avalanche from '../assets/avalanche.png'
 import bnb from '../assets/bnb.png'
 
-import { CoinMarketContext } from '../context/context'
-
 const styles = {
   coinNameRow: 'flex items-center',
   buyButton: `bg-[#1A1F3A] text-[#6188FF] p-1 px-3 text-sm rounded-lg cursor-pointer hover:opacity-50`,
 }
 
 const CoinNameRow = ({ name, icon, clicked }) => {
+
+  const { openModal } = useContext(CoinMarketContext)
 
   
   const coinIcon = () => {

@@ -2,7 +2,7 @@ import ChevronDown from "../../assets/svg/chevronDown"
 import Info from "../../assets/svg/info"
 
 const styles = {
-    textIcon: `flex items-center`
+  textIcon: `flex items-center`
 }
 
 const CMCtableHeader = () => {
